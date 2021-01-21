@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".historico">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="15dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/Button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dia"
+                android:onClick="porDia"
+                android:textSize="11sp"
+                android:background="@drawable/button_historico"/>
+
+            <Button
+                android:id="@+id/Button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Semana"
+                android:onClick="porSemana"
+                android:textSize="11sp"
+                android:background="@drawable/button_historico"/>
+
+            <Button
+                android:id="@+id/Button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mês"
+                android:onClick="porMes"
+                android:textSize="11sp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_historico"/>
+
+            <ImageButton
+                android:id="@+id/ButtonGoBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitXY"
+                android:onClick="voltar"
+                android:src="@android:drawable/ic_menu_revert" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textoEstatistica"
+                android:textSize="20sp"
+                android:text=" "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/resultadoEstatistica"
+                android:textSize="20sp"
+                android:maxLength="5"
+                android:text=" "/>
+
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TableRow
+                android:id="@+id/Tabela"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <ListView
+                    android:id="@+id/DataEmocao"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    tools:layout_editor_absoluteX="1dp"
+                    tools:layout_editor_absoluteY="1dp"/>
+
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
